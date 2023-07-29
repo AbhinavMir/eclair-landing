@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eclair.sh Landing Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.topology.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        height: 70vh;
+      }
+
+      /* Adjust font size for smaller screens if needed */
+      @media screen and (max-width: 768px) {
+        body {
+          height: 85vh;
+          font-size: 14px;
+        }
+      }
+
+      /* Ensure content fits within the screen width */
+      @media screen and (max-width: 480px) {
+        body {
+          height: 100vh;
+          font-size: 12px;
+        }
+      }
+
+      #your-element-selector {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+        #your-element-selector {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 4px;
+        margin: 0 10px;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="your-element-selector"></div>
+
+    <div class="content">
+      <h1>✨ Eclair.sh</h1>
+      <p>
+        Eclair is a Command Line Interface (CLI) tool designed to streamline the
+        creation of library wrappers for Blockchain Business Logic code. With
+        Eclair, you can initialize a new project and run eclair wrap on it to
+        generate Python library wrappers for your contracts. And since it
+        depends on the ABI, it can be used with any language that can generate
+        an ABI.
+      </p>
+      <div class="buttons">
+        <a
+          href="https://github.com/your-github-repo"
+          target="_blank"
+          class="btn"
+          >🐱 Github</a
+        >
+        <a href="https://pypi.org/your-pypi-repo" target="_blank" class="btn"
+          >🐍 PyPi</a
+        >
+      </div>
+    </div>
+
+    <script>
+      VANTA.TOPOLOGY({
+        el: "#your-element-selector",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+    </script>
+  </body>
+</html>
